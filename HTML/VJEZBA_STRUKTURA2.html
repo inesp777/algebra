@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primjer strukture</title>
+</head>
+
+<body>
+    <header>
+        <h1>Glavni naslov</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Naslovnica</a></li>
+                <li><a href="#omeni">O meni</a></li>
+                <li><a href="#usluge">Usluge</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+        <hr>
+
+
+    </header>
+    <main>
+        <section id="omeni">
+
+            <h2>O meni</h2>
+            <figure>
+                <img src="media/images/ljudi/lica/svg/ivana.svg" alt="Ivana" width="100">
+                <figcaption>Ivana</figcaption>
+            </figure>
+            <p>Lorem ipsum dolor sit <ins>amet consectetur</ins> adipisicing elit. Numquam nulla facilis, nisi vel
+                quisquam, odit
+                <b>Eligendi</b> explicabo nam assumenda porro quasi quod saepe impedit.<span>Officia id
+                    consequuntur</span> laudantium
+                consequatur voluptate! <strong> Dolorem hic, <em>porro totam, eaque </em>delectus
+                    repellendus</strong>,
+                perspiciatis autem aliquam
+                maiores sint sunt vitae tempore! <mark>Similique, maiores inventore</mark> Lorem ipsum dolor sit
+                amet
+                consectetur adipisicing elit. Est placeat, consequuntur eveniet hic reiciendis vero voluptate
+                exercitationem nam necessitatibus, quos itaque iusto odio quae pariatur! Beatae, quis, unde vel
+                id odit magni suscipit sunt dolorum necessitatibus neque eius, repellat libero officiis
+                molestiae totam? Illum repudiandae deleniti, accusamus omnis debitis dolores harum enim quos
+                iste vel quo a. Quam numquam dolores recusandae quisquam voluptatum alias, veniam voluptatem
+                illum non nesciunt odio? Cum beatae accusantium numquam voluptatum odit fuga ex explicabo, omnis
+                fugit fugiat vitae nemo accusamus dolorem atque at aspernatur praesentium minima. Quaerat eaque,
+                at facilis maiores accusamus expedita, modi itaque, vero delectus eum odio. Tenetur, iure animi
+                placeat voluptates mollitia ducimus reiciendis, debitis neque sunt delectus in. Nulla eius nisi
+                repellat perspiciatis, omnis numquam nam impedit fuga dignissimos odio harum voluptatem nihil
+                atque debitis eligendi praesentium illo est magnam autem iure architecto dolorum qui! Pariatur,
+                minima voluptates. Magnam, eum repudiandae quasi, pariatur maxime numquam iste error harum
+                sapiente non nihil magni exercitationem nemo corrupti perspiciatis molestiae. Unde sit possimus
+                eligendi ut molestiae fuga repellat. Cupiditate voluptatibus voluptates doloribus quaerat
+                numquam pariatur ad neque dolores, velit deserunt ut laudantium? Perferendis et pariatur
+                mollitia, autem saepe quas iure repellendus reprehenderit quod! Quasi saepe nemo fuga ut,
+                incidunt dolore dolor fugiat temporibus? Ea eveniet tempore dolorum dignissimos tenetur maxime
+                molestiae quia nisi atque sunt, cum neque! Accusantium perspiciatis tempore suscipit facilis,
+                necessitatibus nam vel repellat sit repudiandae nemo soluta facere ducimus ad tenetur voluptates
+                iusto rem! Officia esse cum incidunt sunt molestias libero laboriosam earum deleniti illum est,
+                quibusdam aliquam laborum consectetur commodi unde alias adipisci, minus dolorem laudantium. At
+                dolorem autem id eveniet quaerat debitis sint doloribus voluptate minus ducimus soluta officia,
+                molestiae iste, voluptatibus beatae, laborum quod ratione iure. Deleniti commodi architecto esse
+                tenetur iure. Expedita eius nemo repudiandae aliquid magni.
+            </p>
+
+
+        </section>
+        <hr>
+        <section id="usluge">
+            <h2>Moje usluge</h2>
+            <ul>
+                <li>Technology</li>
+                <li>Content</li>
+                <li>Creative</li>
+                <li>Ilustration</li>
+                <li>Web Site design</li>
+            </ul>
+            <aside>
+                <img src="media/images/stvari/earphones-earth.jpg" alt="ostalo" width="200">
+            </aside>
+            <hr>
+        </section>
+        <section id="kontakt">
+            <h2>Kontaktirajte me</h2>
+            <form name="kontakt" action="/contact.php" method="post" enctype="multipart/form-data" autocomplete="on">
+                <div>
+                    <label for="ime">Ime i Prezime*</label>
+                    <input id="ime" name="imeiprezime" type="text" placeholder="Unesite vaše ime i prezime" size="30"
+                        required>
+                </div>
+                <div>
+                    <label for="email">Mail adresa*</label>
+                    <input id="email" name="mailadresa" type="email" placeholder="Unesite mail adresu" size="30"
+                        required>
+                </div>
+                <div>
+                    <label for="message">Poruka*</label><br>
+                    <textarea id="message" cols="45" rows="10" required></textarea>
+                </div>
+                <div>
+                    <label for="project">Odaberite tip projekta</label><br>
+                    <select id="project" name="projectname" >
+                        <option value="email-marketing">e-mail marketing</option>
+                        <option value="website">website</option>
+                        <option value="consulting">Consulting</option>
+                    </select>
+                </div>
+                <hr>
+
+                <button name="buttons" type="submit">Pošalji</button>
+                <button name="buttonr" type="reset">Poništi</button>
+                <a href="#">Povratak na vrh</a>
+
+            </form>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

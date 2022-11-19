@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrasci vježba</title>
+</head>
+
+<body>
+    <form name="obrazac1" action="" method="post" enctype="multipart/form-data" autocomplete="off">
+        <h1>Kontakt obrazav</h1>
+        <hr>
+        <p>
+            <label for="ime">Ime i prezime*</label><br>
+            <input id="ime" name="imeiprezime" type="text" size="40" required placeholder="Vaše ime i prezime">
+        </p>
+        <p>
+            <label for="email">E-mail*</label><br>
+            <input id="email" name="email" type="email" placeholder="naziv@domena.com">
+        </p>
+        <p>
+            <label for="datum">Datum rođenja</label><br>
+            <input id="datum" name="datumr" type="date" >
+        </p>
+        <p>
+            <label for="color">Boja</label><br>
+            <input id="color" name="boja" type="color">
+        </p>
+        <p>Piložiti životpis<br>
+            <label for="cv">Moj životopis</label>
+            <input id="cv" name="cv" type="file">
+        </p>
+        <p>
+            Odaberi spol<br>
+            <input id="M" name="spol" type="radio">
+            <label for="M">Muški</label>
+            <input id="Z" name="spol" type="radio">
+            <label for="Z">Ženski</label>
+        </p>
+        <p>
+            Napomena<br>
+            
+        </p><textarea id="texta" name="Napomena" cols="40" rows="10"></textarea>
+        <p>
+            <label for="grad">Odaberi grad</label><br>
+            <select id="grad" name="ngrad">
+
+                <option value="Pula">Pula</option>
+                <option value="Rijeka" selected>Rijeka</option>
+                <option value="zagrebPula">Zagreb</option>
+            </select>
+        </p>
+        <p>
+            Odaberi sport<br>
+            <label for="pliv">Plivanje</label>
+            <input id="pliv" name="sport" type="checkbox">
+            <label for="trc">Trčanje</label>
+            <input id="trc" name="sport" type="checkbox">
+            <label for="ten">Tenis</label>
+            <input id="ten" name="sport" type="checkbox">
+
+
+        </p>
+        <input id="botun1" name="botunsub" type="submit" value="Pošalji">
+        <input id="botun2" name="botunres" type="reset" value="Poništi">
+        <hr>
+
+        <button name="butons" type="submit">Pošalji</button>
+        <button name="butonr" type="reset">Poništi</button>
+    </form>
+</body>
+
+</html>
