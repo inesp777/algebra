@@ -1,0 +1,40 @@
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: beige;
+  font-size:14px;
+  margin:0px;
+}
+div{
+  background-color:#fafae5;
+  text-align: justify;
+}
+div:first-child
+{
+  
+  border: 2px solid #333;
+  margin: 1em auto;
+  padding:1em;
+  width:300px;
+}
+div:nth-child(2)
+{ 
+  border: 2px dashed #333;
+  margin: 1em 0 1em auto;
+  padding:1em;
+  width:300px;
+}
+div:nth-child(3)
+{ 
+  border-right: 2px double #333;
+  margin: 1em auto 1em 0;
+  padding:1em;
+  width:300px;
+}
+div:nth-child(4)
+{ 
+  border-top: 2px dashed #33333370;
+  border-bottom: 2px dotted #333;
+  margin: 1em auto;
+  padding:1em;
+  width:1000px;
+}

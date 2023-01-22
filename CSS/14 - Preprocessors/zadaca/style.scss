@@ -1,0 +1,128 @@
+@import "abstracts/mixins";
+
+$colorbbtn: brown;
+$color2: white;
+$colorfont: #333;
+$color1: grey;
+$font: verdana;
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: $font;
+    font-size: 1em;
+    
+}
+
+
+%spaces {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+ header, footer, main, article{
+   @extend %spaces;
+}
+header,
+footer {
+    @include align($color1, $color2, center);
+    height: 30%;
+    
+}
+
+h1,p {
+    margin: 0 auto 1rem;
+}
+
+ul {
+    list-style-type: none;
+   
+
+    li {
+        display: inline;
+        
+
+        a {
+            display:inline-block;
+            @include align($colorbbtn, $color2, center);
+            padding: 10px 2rem;
+            margin: 5% auto;
+            width: 20vw;
+            font-size: 0.75rem;
+            text-decoration: none;
+            &:hover {
+                @include align($color2, $colorbbtn, center);
+            }
+
+            &:active {
+                color: orange;
+            }
+        }
+    }
+}
+
+header {
+    div {
+        margin: 0 auto 1rem;
+
+        a {
+            
+            @include align($colorbbtn, $color2, center);
+            padding: 10px 2rem;
+            width: 20vw;
+            font-size: 0.75rem;
+
+            &:hover {
+                @include align($color2, $colorbbtn, center);
+            }
+
+            &:active {
+                color: orange;
+            }
+        }
+    }
+}
+
+
+ 
+
+footer {
+    @include flex-container;
+    h1{
+        flex-basis: 100%;
+        text-align: center;
+    }  
+    }
+
+
+main{
+    @include flex-container;
+    h1{
+        flex-basis: 100%;
+        text-align: center;
+    }   
+}
+footer{
+    article{
+        h2{
+            text-align: center;
+        }
+        flex-basis:42%;
+        text-align: justify;
+    }
+}
+main{
+    article{
+        h2{
+            text-align: center;
+        }
+        flex-basis:32%;
+        border: 1px solid $colorfont;
+        text-align: justify;
+        
+    }
+}

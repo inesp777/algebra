@@ -1,0 +1,202 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  background-color: azure;
+  border: 2px solid #333;
+  border-radius: 100%;
+  font-size: 2em;
+  line-height: 145px;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 2em 0;
+  text-align: center;
+  position: relative;
+}
+
+/* ANIMACIJE */
+
+@keyframes animation1 {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 300px;
+    background-color: darkolivegreen;
+  }
+}
+
+div:first-of-type {
+  /* animation-name: animation1;
+  animation-duration: 5s;
+  animation-timing-function: ease; */
+   animation: animation1 2s linear; 
+}
+
+/* ANIMACIJA BROJ 2  */
+@keyframes animation2 {
+  0% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+
+  50% {
+    left: 400px;
+    transform: rotate(180deg);
+  }
+
+  100% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+}
+
+div:nth-of-type(2) {
+  /* animation: animation2 4s ease-in-out; */
+  animation-iteration-count: infinite;
+}
+
+/* ANIMACIJA BROJ 3  */
+@keyframes animation3 {
+  0% {
+    left: 0;
+    transform: rotate(0deg);
+    background-color: azure;
+  }
+
+  50% {
+    left: 400px;
+    transform: rotate(360deg);
+    background-color: rgb(171, 228, 228);
+  }
+
+  100% {
+    left: 0;
+    transform: rotate(0deg);
+    background-color: azure;
+  }
+}
+
+div:nth-of-type(3) {
+  /* animation: animation3 4s ease-in-out 1s; */
+}
+
+/* ANIMACIJA BROJ 4  */
+@keyframes animation4 {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 80%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+div:nth-of-type(4) {
+  /* animation: animation4 4s ease-in-out 1s infinite; */
+}
+
+/* ANIMACIJA BROJ 5  */
+@keyframes animation5 {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 80%;
+  }
+}
+
+div:nth-of-type(5) {
+  /* animation: animation5 4s ease-in 2;
+  animation-direction: alternate; */
+}
+
+/* ANIMACIJA BROJ 6  */
+@keyframes animation6 {
+  0% {
+    left: 0;
+    background: olivedrab;
+  }
+
+  100% {
+    left: 80%;
+  }
+}
+
+div:nth-of-type(6) {
+  animation: animation6 4s ease-in 2s;
+  animation-fill-mode: both;
+}
+
+/* ANIMACIJA BROJ 7  */
+@keyframes animation7 {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 80%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+
+div:nth-of-type(7) {
+  animation: animation7 10s ease-in-out infinite;
+}
+
+div:nth-of-type(7):hover {
+  animation-play-state: paused;
+}
+
+/* ANIMACIJA BROJ 8  */
+
+@keyframes animation8 {
+  0% {
+    box-shadow: 0 0 0 0 purple;
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(128, 0, 128, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(128, 0, 128, 0);
+  }
+}
+
+div:nth-of-type(8) {
+  color: white;
+  border: 0px;
+  background: purple;
+  /*animation: animation8 2s infinite;*/
+}
+
+div:nth-of-type(8):hover {
+ animation: animation8 2s infinite;
+}
+
+/* Sintaksa za skraćeno pisanje animacija */
+
+/* animation: name duration timing-function delay iteration-count direction fill-mode play-state */

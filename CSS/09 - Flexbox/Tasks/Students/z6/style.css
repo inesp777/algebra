@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333;
+    font-size: 1.5em;
+}
+
+.wrapper {
+    border: 1px dashed #666;
+    padding: 1em;
+    height: 800px;
+
+}
+
+.wrapper div {
+    background-color: antiquewhite;
+    border: 1px solid #333;
+    width: 32%;
+    padding: 1em;
+    text-align: center;
+    margin: 5px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-between;
+}

@@ -1,0 +1,14 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    color:white;
+    
+    background: url(images/fire.png) center 35%/15% no-repeat fixed,
+    url(images/pattern.png), url(images/blossom.jpg) center center/cover no-repeat fixed;  
+    
+}
+h1{
+    text-align: center;
+    color:white;
+    background-color: #333;
+}

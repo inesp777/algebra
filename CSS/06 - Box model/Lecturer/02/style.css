@@ -1,0 +1,25 @@
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em;
+  background-color: azure;
+  margin:0;
+}
+body>div
+{
+background-color:#80808067;
+margin: 2em auto;
+border:3px solid gray;
+width:800px;
+height: 800px;
+}
+div>div:first-of-type{
+  background-color:#f50e0e67;
+  width:50%;
+  height: 50%;
+  }
+  div>div:last-of-type{
+    background-color:#34f50e6b;
+    width:50%;
+    height: 50%;
+    margin:0 0 0 auto;
+    }

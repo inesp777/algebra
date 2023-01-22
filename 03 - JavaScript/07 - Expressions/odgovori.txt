@@ -1,0 +1,2 @@
+odgovor iz js je varOne=9
+4 puta po 4

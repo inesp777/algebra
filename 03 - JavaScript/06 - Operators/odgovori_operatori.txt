@@ -1,0 +1,20 @@
+1. true
+
+ !!koristi se za konvertiranje vrijednosti u boolean isto što i Boolean()
+
+2. Lorem ipsum
+   Kod više operatora gledamo operatore s lijeva na desno.
+   Vraća prvu istinitu vrijednost a, a to je Lorem Ipsum
+
+3. 5 num-- je isto što i num=num-1 (6-1)
+
+4. ovako kako je napisano u console.log je: 28,673000000000002 , 
+
+a ako bi napisali
+
+console.log("Total:", totalPrice.toFixed(2));
+
+onda je 28,67 
+jer naredba toFixed uzima prva 2 mjesta nakon decimalnog zareza.
+
+ 

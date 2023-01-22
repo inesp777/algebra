@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333;
+    font-size: 1.5em;
+}
+
+.wrapper {
+    border: 1px dashed #666;
+    padding: 1em;
+    height: 100vh;
+
+}
+
+.wrapper div {
+    background-color: antiquewhite;
+    border: 1px solid #333;
+   
+    padding:1em;
+    text-align: center;
+   
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    
+}
+.flex-item {
+    flex-basis:18vh;
+  }

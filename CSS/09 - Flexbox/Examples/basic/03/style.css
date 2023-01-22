@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 1em;
+}
+
+body {
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    border: 1px dashed #666;
+    padding: 1em;
+}
+
+.wrapper div {
+    background-color: azure;
+    border: 1px solid #666;
+    padding: 1em;
+    text-align: center;
+    margin: 1em;
+    width: 30%;
+}
+f.flex-container {
+    /* display: flex, da bi naš roditelj (DIV KOJI IMA KLASU FLEX CONTAINER) postao zaista i flex container*/
+    display: flex;
+
+    /* U kojem smjeru će se prikazivati naša djeca (flex items) unutar flex container roditelja -> može biti, row, row-reverse, column, colum-reverse*/
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}

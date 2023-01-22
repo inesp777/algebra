@@ -1,0 +1,74 @@
+// Varijable
+$color1: #eee;
+$color2: #333;
+$color3: rgba(0, 0, 255, 0.568);
+$color4:white;
+$font1: Tahoma, sans-serif;
+$font2: Courier, monospace;
+
+// Mixin Blok koji se zove "FLEX-CONTAINER"
+@mixin flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@mixin a-button {
+    background-color: $color3;
+    border-radius: 25px;
+    color: $color4;
+    padding: 10px;
+    margin: 1em;
+
+    &:visited {
+        background-color: #46af16;
+    }
+
+    &:hover {
+        background-color: $color1;
+    }
+}
+
+// Mixins s argumentima
+@mixin align-element($display, $text, $space) {
+    text-align: $text;
+    display: $display;
+    margin: $space;
+}
+
+body {
+    background-color: $color1;
+    color: $color2;
+    font-family: $font1;
+}
+
+header {
+    a {
+        // Pozivanje Mixina s našim vrijednostima (unutar zagrada)
+        
+        @include a-button;
+        @include align-element(block, center, 1em auto);
+       
+        width: 10%;
+    }
+}
+
+section {
+    @include flex-container();
+    background-color: $color3;
+    padding: 1em;
+
+    article {
+        background: $color1;
+        flex-basis: 48%;
+
+        a {
+            @include align-element(inline-block, right, 1em 50px)
+        }
+    }
+}
+
+// Footer
+footer {
+    @include a-button;
+}

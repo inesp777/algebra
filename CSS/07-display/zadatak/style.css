@@ -1,0 +1,16 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    margin:0;
+}
+    
+p{
+    background-color: blanchedalmond;
+    border: 1px solid #666;
+    text-align: justify;
+    padding: 20px;
+    display:inline-block;
+    margin-left:-4px;
+    width:33.33%;
+    box-sizing: border-box;
+}

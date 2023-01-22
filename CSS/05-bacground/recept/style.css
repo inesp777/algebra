@@ -1,0 +1,39 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font: 16px;
+    color: rgba(12, 12, 182, 0.699);
+    font-weight: bold;
+    background: url(images/patt.jpg), url(images/stolnjak.jpg);
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    background-color: rgb(4, 7, 161);
+}
+
+h2 {
+    color: rgb(4, 7, 161);
+}
+
+#koraci {
+    background-image: url(images/jelo.jpg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 35%;
+}
+
+a:link {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover {
+    color: cyan;
+}
+
+#ribica {
+    width: 150px;
+    height: 150px;
+}

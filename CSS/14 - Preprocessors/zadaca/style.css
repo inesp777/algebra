@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: verdana;
+  font-size: 1em;
+}
+
+header, footer, main, article {
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+header,
+footer {
+  background-color: grey;
+  color: white;
+  text-align: center;
+  height: 30%;
+}
+
+h1, p {
+  margin: 0 auto 1rem;
+}
+
+ul {
+  list-style-type: none;
+}
+ul li {
+  display: inline;
+}
+ul li a {
+  display: inline-block;
+  background-color: brown;
+  color: white;
+  text-align: center;
+  padding: 10px 2rem;
+  margin: 5% auto;
+  width: 20vw;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+ul li a:hover {
+  background-color: white;
+  color: brown;
+  text-align: center;
+}
+ul li a:active {
+  color: orange;
+}
+
+header div {
+  margin: 0 auto 1rem;
+}
+header div a {
+  background-color: brown;
+  color: white;
+  text-align: center;
+  padding: 10px 2rem;
+  width: 20vw;
+  font-size: 0.75rem;
+}
+header div a:hover {
+  background-color: white;
+  color: brown;
+  text-align: center;
+}
+header div a:active {
+  color: orange;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer h1 {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main h1 {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+footer article {
+  flex-basis: 42%;
+  text-align: justify;
+}
+footer article h2 {
+  text-align: center;
+}
+
+main article {
+  flex-basis: 32%;
+  border: 1px solid #333;
+  text-align: justify;
+}
+main article h2 {
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
