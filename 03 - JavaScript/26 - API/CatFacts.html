@@ -14,9 +14,9 @@
     <p id='catFact'></p>
     <script>
         fetch(`https://catfact.ninja/fact`)
-           .then(response => response.json())
-           .then(data => document.getElementById('catFact').innerHTML = `${data.fact}`)
-           .catch(error => alert(error))
+            .then(response => response.json())
+            .then(data => document.getElementById('catFact').innerHTML = `${data.fact}`)
+            .catch(error => alert(error))
     </script>
 </body>
 

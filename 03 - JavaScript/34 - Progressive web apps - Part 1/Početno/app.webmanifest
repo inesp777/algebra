@@ -1,0 +1,26 @@
+{
+  "name": "Reverted by Bryant Smith",
+  "short_name": "Reverted",
+  "description": "The first XHTML 1.1 Validated Template by Bryant Smith.",
+  "icons": [
+    {
+      "src": "bar.png",
+      "sizes": "755x74",
+      "type": "image/png"
+    },
+    {
+      "src": "header.png",
+      "sizes": "753x185",
+      "type": "image/png"
+    },
+    {
+      "src": "background.png",
+      "sizes": "1x2000",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "fullscreen",
+  "theme_color": "#26476E",
+  "background_color": "#26476E"
+}

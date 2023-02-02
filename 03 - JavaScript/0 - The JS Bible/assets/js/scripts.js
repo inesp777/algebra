@@ -25,6 +25,7 @@
  * - DOM Manipulation
  * - Classes
  * - Async Functions
+ * - Arrow Functions
  * - API (connecting to API)
  * - Cookies
  * - Local storage
@@ -134,7 +135,7 @@ const person = {
     id: 115648972,
     fullName: function () {
         return this.firstName + ' ' + this.lastName;
-    }
+    },
 };
 
 console.log(person.id);
@@ -142,11 +143,11 @@ console.log(person.lastName);
 console.log(person.fullName());
 
 // Converting JSON into an object
-myJSON = "{'name':'Nino', 'age':24, 'car':null}";
-myObject = JSON.parse(myJSON);
+//myJSON = "{ 'name':'Nino', 'age':24, 'car': 'toyota' }";
+//myObject = JSON.parse(myJSON);
 
-console.log(myObject);
-console.log(myObject.age);
+//console.log(myObject);
+//console.log(myObject.age);
 
 // Another object example
 const phones = {
@@ -465,3 +466,132 @@ class Report extends Student {
 
 let student2 = new Report('John', 'Smith', 24, 'Senior'); // Creates an instance of the Report class.
 console.log(student1.yearLevel());
+
+/**************************************************
+ * ASYNC FUNCTIONS
+ * The async function declaration declares an async function where the await keyword is permitted within the function body. The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.
+ * https://www.programiz.com/javascript/async-await
+**************************************************/
+
+// A promise
+let promise = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        resolve('Promise resolved')
+    }, 4000);
+});
+
+// Async function
+async function asyncFunc() {
+    try {
+        // wait until the promise resolves 
+        let result = await promise;
+        console.log(result);
+        console.log('Hello, class!');
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+
+// Calling the async function
+asyncFunc(); // Promise resolved
+
+/**************************************************
+ * ARROW FUNCTIONS
+**************************************************/
+
+hello = () => {
+    return 'Hello, class!';
+}
+
+// Shorter way to write Arrow Function
+hello2 = () => 'Hello, class!';
+
+// Arrow function with params
+hello3 = (name) => 'Hello, ' + name;
+
+// Shorter way to write Arrow Function with params
+hello4 = name => 'Hello, ' + name;
+
+/**************************************************
+ * CONNECTING TO API'S
+**************************************************/
+
+// Guess the age of a person based on their name
+const userInput = window.prompt(`Enter your name:`);
+fetch(`https://api.agify.io/?name=${userInput}`)
+    .then(response => response.json())
+    .then(data => alert(`${data.name}, you are ${data.age} year(s) old.`))
+    .catch(error => alert(error));
+
+
+// Display a random cat fact
+fetch('https://catfact.ninja/fact')
+    .then(response => response.json())
+    .then(data => document.getElementById('catFact').innerHTML = `${data.fact}`)
+    .catch(error => alert(error));
+
+
+/**************************************************
+ * COOKIES
+**************************************************/
+
+document.cookie = 'username=Nino Škuflić; expires=Thu, 31 Dec 2023 12:00:00 UTC; path=/; Secure;'; // Set cookie
+let getCookie = 'Cookie is' + document.cookie;
+
+/**************************************************
+ * LOCAL STORAGE
+**************************************************/
+
+localStorage.setItem('username', 'ninoskuflic'); // Add to local storage
+localStorage.setItem('course', 'Front-End Development');
+
+localStorage.getItem('name'); // Get local storage item with identifier 'NAME'
+localStorage.removeItem('name'); // Remove a local storage item with identifier 'NAME'
+localStorage.clear(); // Remove (delete) all local storage items
+
+
+/**************************************************
+ * FUNCTIONS (TEST CASES)
+**************************************************/
+
+// A function which we will test using JEST
+function sum(a, b) {
+    return a + b;
+}
+
+// Test case - we're testing to see if a function sum will return a value of 11 once we input 6 and 5 as parameters
+test('Zbrajanje - 6 + 5 = 11', () => {
+    expect(sum(6, 5)).toBe(11); // What output do we expect?
+});
+
+// Array called shoppingList
+const shoppingList = [
+    'dipers',
+    'eggs',
+    'flour',
+    'milk',
+    'apples'
+];
+
+// Test case
+test('Does my shopping list contains eggs?', () => {
+    expect(shoppingList).toContain('eggs');
+});
+
+// Test case
+test('Is our constant a null?', () => {
+    const ns = null;
+    expect(ns).toBeNull();
+    expect(ns).toBeDefined();
+    expect(ns).not.toBeUndefined();
+});
+
+// Test case
+test('Adding positive numbers is not a zero', () => {
+    for (let i = 1; i < 10; i++) {
+        for (let j = 1; j < 10; j++) {
+            expect(i + j).not.toBe(0);
+        }
+    }
+});

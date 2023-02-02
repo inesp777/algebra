@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAT API</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto, sans-serif';
+
+        }
+
+        tr,
+        td,
+        th {
+            border: grey solid 1px;
+            font-size: 13px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Rezultat</h1>
+   <!-- <table id="cat"></table>-->
+    <script>
+        const url = "https://catfact.ninja/breeds";
+        fetch(url)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new error(`Response status: ${response.status}`)
+                }
+                return response.json()
+            })
+            .then(data => ShowData(data))
+            .catch(error => alert(error))
+
+        function ShowData(data) {
+            let tab = `<tr>`;
+            for (var i in data.data[0]) {
+                tab = tab + `<th>${i}</th>`;
+            }
+            tab = tab + `</tr>`;
+
+            for (i of data.data) {
+                tab = tab + `<tr>
+                    <td>${i.breed}</td>
+                    <td>${i.country}</td>
+                    <td>${i.origin == '' ? undefined : i.origin}</td>
+                    <td>${i.coat}</td>
+                    <td>${i.pattern == 'All' ? i.pattern.replace("All", "SINGLE") : i.pattern == '' ? undefined : i.pattern}</td>
+                </tr>`
+
+            }
+           // document.getElementById('cat').innerHTML = tab;
+           var tab1=document.createElement("TABLE");
+           tab1.setAttribute("id","cat2");
+           document.body.appendChild(tab1);
+           document.getElementById('cat2').innerHTML = tab;
+        }
+    </script>
+
+</body>
+
+</html>

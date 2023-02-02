@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movi</title>
+</head>
+
+<body>
+    <h3>Movi info</h3>
+    <hr>
+    <p id='movi_title'></p>
+    <p id='movi_year'></p>
+    <p id='movi_RT'></p>
+    <p id='movi_writer'></p>
+    <p id='movi_actors'></p>
+    <p>Raiting:</p>
+    <ul id="lista" title="Raiting"></ul>
+
+    <script>
+        // const userInput = window.prompt(`Enter your name:`);
+        const url = `https://www.omdbapi.com/?i=tt3896198&apikey=b9895b94`;
+        const mlist = document.querySelector('ul');
+        fetch(url)
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error, status = ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => showData(data))
+            .catch(error => alert(error))
+
+
+        function showData(data) {
+            
+            console.log(data);
+            document.getElementById("movi_title").innerHTML = `Title: ${data.Title}`;
+            document.getElementById("movi_year").innerHTML = `Year: ${data.Year}`;
+            document.getElementById("movi_RT").innerHTML = `Runtime: ${data.Runtime}`;
+            document.getElementById("movi_writer").innerHTML = `Writer: ${data.Writer}`;
+            document.getElementById("movi_actors").innerHTML = `Actors : ${data.Actors}`;
+
+            for (let i of data.Ratings) {
+                var text="";
+                const listItem=document.createElement('li');
+                const nameElement=document.createElement('span');
+                text = `${i.Source}  ${i.Value}`;
+                nameElement.textContent=text;
+                listItem.append(nameElement);
+                mlist.appendChild(listItem);
+            }
+           
+        }
+    </script>
+</body>
+
+</html>

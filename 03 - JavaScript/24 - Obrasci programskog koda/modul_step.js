@@ -14,9 +14,3 @@ var StepCounter = (function () {
         getTotalSteps: getTotalSteps,
     };
 })();
-
-console.log(StepCounter.getTotalSteps());
-StepCounter.walk();
-console.log(StepCounter.getTotalSteps());
-
-module.exports = StepCounter;
