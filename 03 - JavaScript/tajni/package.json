@@ -1,11 +1,16 @@
 {
-  "name": "ines777_",
+  "name": "ines777_tiny",
   "version": "1.0.0",
-  "description": "test",
+  "description": "Removes all spaces from a string - useless, but beautiful.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "ines",
-  "license": "ISC"
+  "keywords": [
+    "tiny",
+    "npm",
+    "package"
+  ],
+  "author": "John Doe",
+  "license": "MIT"
 }
