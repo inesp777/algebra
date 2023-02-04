@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats vjezba 02</title>
+</head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    td,
+    tr,
+    th {
+        border: 1px solid gray;
+        font-size: 13px;
+    }
+</style>
+
+<body>
+    <table id="tblcat"></table>
+    <script>
+        const url = "https://catfact.ninja/breeds";
+        fetch(url)
+            .then(response => response.json())
+            .then(data => ShowData(data))
+            .catch(error => alert(error))
+        function ShowData(data) {
+            const mtable = `<tr>
+        <th>Breed</th>
+        <th>Coat</th>
+        <th>Origin</th>
+        <th>pattern</th>
+        </tr>`
+document.getElementById("tblcat").innerHTML=mtable;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
