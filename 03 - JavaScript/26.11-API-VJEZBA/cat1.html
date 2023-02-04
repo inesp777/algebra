@@ -5,18 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cats vjezba 02</title>
+    <title>Cats vježba </title>
 </head>
 <style>
     body {
+      
         font-family: Arial, Helvetica, sans-serif;
     }
 
     td,
     tr,
     th {
-        border: 1px solid gray;
+        border-bottom: 1px solid gray;
         font-size: 13px;
+    }
+    #tblcat{
+        position:absolute;
+        left:30%;
     }
 </style>
 
@@ -29,13 +34,22 @@
             .then(data => ShowData(data))
             .catch(error => alert(error))
         function ShowData(data) {
-            const mtable = `<tr>
+            let mtable = `<tr>
         <th>Breed</th>
         <th>Coat</th>
         <th>Origin</th>
         <th>pattern</th>
         </tr>`
-document.getElementById("tblcat").innerHTML=mtable;
+            for (var i of data.data) {
+
+                mtable = mtable + `<tr>
+              <td>${i.breed}</td> 
+              <td>${i.coat}</td>
+              <td>${i.origin ==''? 'undefined':i.origin}</td>
+              <td>${i.pattern =='' ? 'undefined': i.pattern.replace("All","Single")}</td>
+                </tr>`;
+            }
+            document.getElementById("tblcat").innerHTML = mtable;
 
         }
 
