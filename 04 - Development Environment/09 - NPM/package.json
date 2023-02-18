@@ -1,0 +1,15 @@
+{
+  "name": "lite-server",
+  "version": "1.0.0",
+  "description": "liteserver",
+  "main": "index.js",
+  "scripts": {
+    "server": "lite-server"
+  },
+  "keywords": [
+    "lite",
+    "server"
+  ],
+  "author": "xy",
+  "license": "MIT"
+}

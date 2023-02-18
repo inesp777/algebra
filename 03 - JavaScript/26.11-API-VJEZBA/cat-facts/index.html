@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Facts API</title>
+    <style>
+        ul{
+            list-style-type: decimal;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Činjenice o mačkama</h3>
+    <p id="page"></p>
+    <ul id="facts"></ul>
+    <hr>
+    <p >Linkovi:</p>
+    <ul id="lista" title="Linkovi"></ul>
+    <script>
+        fetch(`https://catfact.ninja/facts`)
+            .then(response => response.json())
+            .then(data => ShowData(data))
+            .catch(error => alert(error))
+
+        function ShowData(data) {
+            let tekst = '';
+            let facts = document.getElementById('facts');
+            let mlista = document.getElementById('lista');
+            tekst = `Tekstovi na ${data.current_page} stranici`;
+            document.getElementById('page').innerHTML = tekst;
+            for (i of data.data) {
+                var ListItem = document.createElement('li');
+                var listtekst = document.createElement('span')
+
+                listtekst.innerHTML = i.fact;
+                ListItem.append(listtekst)
+                facts.appendChild(ListItem);
+            }
+            for (i of data.links) {
+                var ListItem = document.createElement('li');
+                var mhref = document.createElement('a');
+                if (i.url != null) {
+                    mhref.setAttribute('href',`${i.url}`);
+                    mhref.setAttribute('target','_blank');
+                    mhref.innerHTML=i.url;
+                    ListItem.appendChild(mhref);
+                    mlista.appendChild(ListItem);
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>
