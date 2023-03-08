@@ -1,39 +1,43 @@
-import './App.css';
+import React from 'react';
+import React, { useState } from 'react';
+import { UserChildren, UserClass, UserFunction } from './user';
 
-// Default export
-// import Person from './Components/Person';
-// import Student from './Components/Student';
-// import Program from './Components/Program';
-// import Grades from './Components/Grades';
+export default function App() {
+  const [count, setCount] = useState(0);
+  state = {
+    users: [
+      { name: 'Ivan', years: 30 },
+      { name: 'Marko', years: 35 },
+      { name: 'Ana', years: 25 },
+    ],
+    children: 'A hobi mi je plivanje.',
+  };
 
-// IMPORTANT - Ovo morate znati
-// Više importa (redaka) zamijenili smo sa samo jednim importom
-import { Student, Program, Grades, Person, Conditional } from './Components';
+  handleButtonPress = () => {
+    const { users } = this.state;
 
-// IMPORTANT - Ovo morate znati
-// Named export
-import { sum, greet, student } from './Helpers/Utility';
+    const newUsers = users.map(user => {
+      return { ...user, years: user.years + 1 };
+    });
 
-// Import everything as something
-import * as all from './Helpers/Utility';
+    this.setState({ users: newUsers });
+  };
 
-function App() {
-  return (
-    <div>
-      <Conditional/>
-      {/* <Student />
-      <Program />
-      <Grades />
-      Person is: {Person.name}
-      <br />
-      Sum is: {sum(5, 5)}
-      <br />
-      {greet('Nino')}
-      Student: {student}
-      <br />
-      Sum is: {all.sum(10, all.num1)} */}
-    </div>
-  );
+  render() {
+    const { users } = this.state;
+
+    return (
+      <div>
+        <h1>React aplikacija</h1>
+        <p>Ovo zbilja radi</p>
+        <button onClick={this.handleButtonPress}>Promjena godina</button>
+        <UserFunction name={users[0].name} years={users[0].years} />
+        <UserFunction name={users[1].name} years={users[1].years} />
+        <UserClass name={users[2].name} years={users[2].years} />
+        <UserChildren name={users[2].name} years={users[2].years}>
+          A hobi mi je plivanje.
+        </UserChildren>
+      </div>
+    );
+  }
 }
-
-export default App;

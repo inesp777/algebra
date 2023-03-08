@@ -21,12 +21,12 @@ function App() {
     <div>
       {/* <ClassComponent name="Nino"/>
       <FunctionalComponent name="John"/>
-      
+      */}
       <Comment 
       date={comment.date}
       text={comment.text}
       author={comment.author}
-      /> */}
+      /> 
 
 
       <MultiplePropsComponent/>

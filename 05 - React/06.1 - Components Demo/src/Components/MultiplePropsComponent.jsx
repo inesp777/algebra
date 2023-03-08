@@ -24,7 +24,7 @@ MultiplePropsComponent.propTypes = {
 
 MultiplePropsComponent.defaultProps = {
     name: "Stranger",
-    years: "Unknown",
+    years: "25",
     gender: "Unknown",
     location: "Planet Earth",
     favoriteShow: "Supply the props and I'll let you know ;)"
