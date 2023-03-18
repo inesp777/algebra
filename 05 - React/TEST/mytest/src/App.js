@@ -1,12 +1,14 @@
 import React from 'react';
-import RadioButton from './Components/RadioButton';
+import Calculate from './Components/Calculate';
 
-export default function App (){
+export default class App extends React.Component {
+ 
+  render() {
+    
     return (
       <div>
-        <h1>Izbor </h1>
-        <RadioButton />
+       <Calculate/>
       </div>
     );
   }
-
+}
