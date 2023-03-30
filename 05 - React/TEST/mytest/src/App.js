@@ -1,5 +1,5 @@
 import React from 'react';
-import Calculate from './Components/Calculate';
+import Login from './Components/Login';
 
 export default class App extends React.Component {
  
@@ -7,7 +7,8 @@ export default class App extends React.Component {
     
     return (
       <div>
-       <Calculate/>
+       <p>Search</p>
+       <Login/>
       </div>
     );
   }
