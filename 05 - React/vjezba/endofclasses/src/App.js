@@ -1,11 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-import {Products} from './Components'
+import { Products, User, Card, Login } from './Components'
 
 function App() {
   return (
-    <div className="App">
-           <Products/>
+    <div >
+      <Login/>
+      <div className='container'>
+        <User />
+        <Card />
+      </div>
+  <Products />
+ 
+
     </div>
   );
 }
