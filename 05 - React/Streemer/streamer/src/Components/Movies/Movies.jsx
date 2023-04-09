@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import { dateFormatting_Y, dateFormatting_YMD } from '../../Helpers/utils';
 
+// Firebase
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
+import { db } from '../../firebase';
+
 // .env variables
 const api_key = process.env.REACT_APP_API_KEY;
 const url = process.env.REACT_APP_URL;
@@ -18,6 +22,23 @@ export default function Movies() {
             .then(response => response.json())
             .then(data => setMovie(data))
     }, [])
+
+    const favorites = async () => {
+        // e.preventDefault();
+        try {
+            await addDoc(collection(db, 'favorites'), {
+                referenece: movie.id,
+                name: movie.title,
+                type: 'movie',
+                image: movie.poster_path,
+                adult: movie.adult,
+                timestamp: serverTimestamp()
+            })
+            alert(`${movie.title} was added to favorites!`)
+        } catch (e) {
+            console.error(e);
+        }
+    }
 
     document.title = `${movie.title} (${new Date(movie.release_date).toLocaleString('en-US', dateFormatting_Y)}) | Streamer`
 
@@ -38,6 +59,7 @@ export default function Movies() {
                 </div>
 
                 <div className='holder'>
+                    <button className='custom-button-inverted' onClick={favorites}>Add To Favorites</button>
                     {movie.homepage && <a href={movie.homepage} className='custom-button-inverted'>Visit Website</a>}
                     <a href={`/rate/movie/${movie.id}`} className='custom-button-inverted animated'>Rate Movie</a>
                 </div>
