@@ -29,9 +29,6 @@ margin: 0 5px ;
   background-image: linear-gradient(180deg, rgb(163, 161, 161), #dfdbdb);
 }
 
-.c-member-list__member__avatar {
-  padding-right: 5px;
-}
 
 .c-member-list__member__username {
   font-size: 80%;

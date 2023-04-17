@@ -7,12 +7,9 @@ export default function ChatMemberList() {
 
   return (
     <div className="c-member-list__item">
-      <div>Members:</div>
+      <div>Members: ({membersArray.length})</div>
       {membersArray.map((member) => (
         <div className="c-member-list__member__item" key={member.id}>
-         {/*} <span className="c-member-list__member__avatar">
-            {member.clientData.avatar}
-      </span>*/}
           <span className="member_list_avatarc" style={{ backgroundColor: member.clientData.avcolor }}>
           </span>
           <span className="c-member-list__member__username">

@@ -15,15 +15,15 @@ export default function MyChatApp() {
     return '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
   }
 
-  function onUserLogin(username, avatar) {
+  function onUserLogin(username) {
     if (username) {
       const avcolor = randomColor();
       const drone = new window.Scaledrone(CHANNEL_ID, {
-        data: { username, avatar, avcolor },
+        data: { username, avcolor },
       });
       drone.on("open", () => {
         setDrone(drone);
-        setUser({ id: drone.clientId, username, avatar, avcolor });
+        setUser({ id: drone.clientId, username,avcolor });
       });
     }
   }

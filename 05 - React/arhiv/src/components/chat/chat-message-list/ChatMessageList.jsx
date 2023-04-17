@@ -60,7 +60,9 @@ export default function ChatMessageList() {
         } else {
           return (
             <div className={getWrapperClass(msg)} key={msg.id}>
-              <div className="c-message__avatar">{msg.user.avatar}</div>
+              <span className="message_list_avatarc" style={{ backgroundColor: msg.user.avcolor}}>
+          </span>
+              
 
               <div className="c-message__message-item">
                 <div className={getUsernameClass(msg)}>

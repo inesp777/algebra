@@ -46,7 +46,7 @@ export default function Chat() {
             type: "MEMBER_JOINED",
             user: {
               username: member.clientData.username,
-              avatar: member.clientData.avatar,
+              avcolor: member.clientData.avcolor,
             },
           },
         ];
@@ -66,7 +66,7 @@ export default function Chat() {
             type: "MEMBER_LEFT",
             user: {
               username: member.clientData.username,
-              avatar: member.clientData.avatar,
+              avcolor: member.clientData.avcolor,
             },
           },
         ];
@@ -84,7 +84,7 @@ export default function Chat() {
             user: {
               id: message.member.id,
               username: message.member.clientData.username,
-              avatar: message.member.clientData.avatar,
+              avcolor:message.member.clientData.avcolor,
             },
           },
         ];
